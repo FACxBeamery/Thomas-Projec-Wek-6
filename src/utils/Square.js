@@ -6,12 +6,21 @@ const Square = (props) => {
 		<button
 			className={styles.square}
 			onClick={() => {
-				const nextSquares = [...squares];
-				squares[props.value] = "X";
-				setSquares(nextSquares);
+				const nextSquares = [...props.squares];
+				if (props.xTurn) {
+					nextSquares[props.id] = "X";
+				} else {
+					nextSquares[props.id] = "O";
+				}
+				console.log("squares: ", props.squares);
+				console.log("nextSquares: ", nextSquares);
+				props.setSquares(nextSquares);
+				props.setXTurn(!props.xTurn);
 			}}
 		>
 			{props.value}
 		</button>
 	);
 };
+
+export default Square;

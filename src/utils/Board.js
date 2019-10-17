@@ -1,41 +1,10 @@
 import React from "react";
 import styles from "../index.css";
-
-// const Status = (props) => {
-// 	return (
-// 		<div>
-// 			<div className={styles.status}>{status}</div>
-// 		</div>
-// 	);
-// };
-
-const Square = (props) => {
-	return (
-		<button
-			className={styles.square}
-			onClick={() => {
-				const nextSquares = [...props.squares];
-				if (props.xTurn) {
-					nextSquares[props.id] = "X";
-				} else {
-					nextSquares[props.id] = "O";
-				}
-				console.log("squares: ", props.squares);
-				console.log("nextSquares: ", nextSquares);
-				props.setSquares(nextSquares);
-				props.setXTurn(!props.xTurn);
-			}}
-		>
-			{props.value}
-		</button>
-	);
-};
+import Square from "./Square.js";
 
 const Board = (props) => {
-	const status = "Next player: X";
 	return (
 		<div>
-			<div className={styles.status}>{status}</div>
 			<div className={styles.boardRow}>
 				<Square
 					id={0}
@@ -118,19 +87,4 @@ const Board = (props) => {
 	);
 };
 
-const Game = (props) => {
-	const [squares, setSquares] = React.useState(Array(9).fill(null));
-	const [xTurn, setXTurn] = React.useState(true);
-	return (
-		<div>
-			<Board
-				squares={squares}
-				setSquares={setSquares}
-				xTurn={xTurn}
-				setXTurn={setXTurn}
-			/>
-		</div>
-	);
-};
-
-export default Game;
+export default Board;
