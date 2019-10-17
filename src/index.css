@@ -1,8 +1,18 @@
-.grid {
-	display: grid;
-	grid-template-columns: 200vw 200vw;
-	grid-template-rows: 400vw 400vw;
-	background-color: blue;
-	min-width: 100vw;
-	min-height: 100vw;
+.body {
+	font: 14px "Century Gothis", Futura, sans-serif;
+	margin: 20px;
+}
+
+.square {
+	background: #ffffff;
+	border: 1px solid #999999;
+	font-size: 1.5rem;
+	height: 10vw;
+	width: 10vw;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.status {
+	margin: 10px;
 }
