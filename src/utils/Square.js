@@ -7,7 +7,7 @@ const Square = (props) => {
 			className={styles.square}
 			onClick={() => {
 				if (
-					props.calculateWinner(props.squares) != null ||
+					props.calculateWinner(props.squares) ||
 					props.isBoardFull(props.squares)
 				) {
 					return;

@@ -3,6 +3,7 @@ import React from "react";
 import Board from "./Board.js";
 import Status from "./Status.js";
 import RestartButton from "./RestartButton.js";
+import EnterPlayers from "./EnterPlayers.js";
 
 const Game = (props) => {
 	const [squares, setSquares] = React.useState(Array(9).fill(null));
@@ -23,11 +24,14 @@ const Game = (props) => {
 		for (let i = 0; i < winningCombos.length; i++) {
 			const [a, b, c] = winningCombos[i];
 
-			if (squares[a] === squares[b] && squares[b] === squares[c]) {
+			if (
+				squares[a] &&
+				squares[a] === squares[b] &&
+				squares[b] === squares[c]
+			) {
 				return squares[a];
 			}
 		}
-
 		return false;
 	};
 
@@ -40,7 +44,8 @@ const Game = (props) => {
 	};
 
 	return (
-		<div>
+		<main>
+			<EnterPlayers />
 			<Status
 				squares={squares}
 				xTurn={xTurn}
@@ -56,7 +61,7 @@ const Game = (props) => {
 				isBoardFull={isBoardFull}
 			/>
 			<RestartButton setSquares={setSquares} setXTurn={setXTurn} />
-		</div>
+		</main>
 	);
 };
 
