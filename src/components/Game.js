@@ -11,71 +11,14 @@ const Game = (props) => {
 	const [winner, setWinner] = React.useState(null);
 	const [boardFull, setBoardFull] = React.useState(false);
 
-	// const calculateWinner = (squares) => {
-	// 	const winningCombos = [
-	// 		[0, 1, 2],
-	// 		[3, 4, 5],
-	// 		[6, 7, 8],
-	// 		[0, 3, 6],
-	// 		[1, 4, 7],
-	// 		[2, 5, 8],
-	// 		[0, 4, 8],
-	// 		[2, 4, 6]
-	// 	];
-
-	// 	// for (let i = 0; i < winningCombos.length; i++) {
-	// 	// 	const [a, b, c] = winningCombos[i];
-
-	// 	// 	if (
-	// 	// 		squares[a] &&
-	// 	// 		squares[a] === squares[b] &&
-	// 	// 		squares[b] === squares[c]
-	// 	// 	) {
-	// 	// 		return squares[a];
-	// 	// 	}
-	// 	// }
-
-	// 	winningCombos.forEach((elem) => {
-	// 		const [a, b, c] = elem;
-	// 		// console.log(
-	// 		// 	"squares[a]: ",
-	// 		// 	squares[a],
-	// 		// 	"squares[b]: ",
-	// 		// 	squares[b],
-	// 		// 	"squares[c]: ",
-	// 		// 	squares[c]
-	// 		// );
-	// 		if (
-	// 			squares[a] &&
-	// 			squares[a] === squares[b] &&
-	// 			squares[b] === squares[c]
-	// 		) {
-	// 			// console.log("Winner found!");
-	// 			return squares[a];
-	// 		}
-	// 	});
-	// 	// console.log("Winner not found!");
-	// 	return false;
-	// };
-
-	// const isBoardFull = (squares) => {
-	// 	if (!squares.includes(null)) {
-	// 		return true;
-	// 	} else {
-	// 		return false;
-	// 	}
-	// };
-
 	return (
 		<main>
 			<EnterPlayers />
 			<Status
 				squares={squares}
 				p1Turn={p1Turn}
-				// calculateWinner={calculateWinner}
 				winner={winner}
 				setWinner={setWinner}
-				// isBoardFull={isBoardFull}
 				boardFull={boardFull}
 				setBoardFull={setBoardFull}
 			/>
@@ -84,10 +27,8 @@ const Game = (props) => {
 				setSquares={setSquares}
 				p1Turn={p1Turn}
 				setP1Turn={setP1Turn}
-				// calculateWinner={calculateWinner}
 				winner={winner}
 				setWinner={setWinner}
-				// isBoardFull={isBoardFull}
 				boardFull={boardFull}
 				setBoardFull={setBoardFull}
 			/>

@@ -1,55 +1,54 @@
 import React from "react";
 import styles from "../index.css";
 
-const calculateWinner = (squares) => {
-	const winningCombos = [
-		[0, 1, 2],
-		[3, 4, 5],
-		[6, 7, 8],
-		[0, 3, 6],
-		[1, 4, 7],
-		[2, 5, 8],
-		[0, 4, 8],
-		[2, 4, 6]
-	];
-
-	winningCombos.forEach((elem) => {
-		const [a, b, c] = elem;
-		if (
-			squares[a] &&
-			squares[a] === squares[b] &&
-			squares[b] === squares[c]
-		) {
-			return squares[a];
-		}
-	});
-	return false;
-};
-
-const isBoardFull = (squares) => {
-	if (!squares.includes(null)) {
-		return true;
-	} else {
-		return false;
-	}
-};
-
 const Square = (props) => {
+	const calculateWinner = (squares) => {
+		const winningCombos = [
+			[0, 1, 2],
+			[3, 4, 5],
+			[6, 7, 8],
+			[0, 3, 6],
+			[1, 4, 7],
+			[2, 5, 8],
+			[0, 4, 8],
+			[2, 4, 6]
+		];
+
+		winningCombos.forEach((elem) => {
+			const [a, b, c] = elem;
+
+			if (
+				squares[a] &&
+				squares[a] === squares[b] &&
+				squares[b] === squares[c]
+			) {
+				props.setWinner(squares[a]);
+				return;
+			}
+		});
+	};
+
+	const isBoardFull = (squares) => {
+		if (!squares.includes(null)) {
+			props.setBoardFull(true);
+			return;
+		}
+	};
+
 	return (
 		<button
 			className={styles.square}
 			onClick={() => {
-				console.log("Winner is:", calculateWinner(props.squares));
-				if (calculateWinner(props.squares)) {
-					console.log("Winner found!");
-					props.setWinner(calculateWinner(props.squares));
+				calculateWinner(props.squares);
+				isBoardFull(props.squares);
+
+				if (props.winner) {
+					console.log("Winner found! Terminate game!");
 					return;
 				}
 
-				console.log("Board full? ", isBoardFull(props.squares));
-				if (isBoardFull(props.squares)) {
-					console.log("Board full!");
-					props.setBoardFull(true);
+				if (props.boardFull) {
+					console.log("Board full! Terminate game!");
 					return;
 				}
 
@@ -59,8 +58,6 @@ const Square = (props) => {
 				} else {
 					nextSquares[props.id] = "O";
 				}
-				console.log("squares: ", props.squares);
-				console.log("nextSquares: ", nextSquares);
 				props.setSquares(nextSquares);
 				props.setP1Turn(!props.p1Turn);
 			}}
@@ -78,8 +75,8 @@ const Square = (props) => {
 // 			setSquares={props.setSquares}
 // 			xTurn={props.xTurn}
 // 			setXTurn={props.setXTurn}
-// 			calculateWinner={props.calculateWinner}
-// 			isBoardFull={props.isBoardFull}
+// 			props.calculateWinner={props.props.calculateWinner}
+// 			props.isBoardFull={props.props.isBoardFull}
 // 		/>
 // 	);
 // };
