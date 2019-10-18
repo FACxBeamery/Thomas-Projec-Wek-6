@@ -32,7 +32,12 @@ const Game = (props) => {
 				boardFull={boardFull}
 				setBoardFull={setBoardFull}
 			/>
-			<RestartButton setSquares={setSquares} setP1Turn={setP1Turn} />
+			<RestartButton
+				setSquares={setSquares}
+				setP1Turn={setP1Turn}
+				setWinner={setWinner}
+				setBoardFull={setBoardFull}
+			/>
 		</main>
 	);
 };

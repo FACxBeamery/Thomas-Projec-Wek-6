@@ -8,6 +8,8 @@ const RestartButton = (props) => {
 			onClick={() => {
 				props.setSquares(Array(9).fill(null));
 				props.setP1Turn(true);
+				props.setWinner(null);
+				props.setBoardFull(false);
 			}}
 		>
 			Restart game!
