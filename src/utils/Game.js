@@ -2,6 +2,7 @@ import React from "react";
 // import styles from "../index.css";
 import Board from "./Board.js";
 import Status from "./Status.js";
+import RestartButton from "./RestartButton.js";
 
 const Game = (props) => {
 	const [squares, setSquares] = React.useState(Array(9).fill(null));
@@ -54,6 +55,7 @@ const Game = (props) => {
 				calculateWinner={calculateWinner}
 				isBoardFull={isBoardFull}
 			/>
+			<RestartButton setSquares={setSquares} setXTurn={setXTurn} />
 		</div>
 	);
 };
