@@ -6,9 +6,12 @@ const Square = (props) => {
 		<button
 			className={styles.square}
 			onClick={() => {
-				// if () {
-				// 	return;
-				// }
+				if (
+					props.calculateWinner(props.squares) != null ||
+					props.isBoardFull(props.squares)
+				) {
+					return;
+				}
 
 				const nextSquares = [...props.squares];
 				if (props.xTurn) {
@@ -26,5 +29,19 @@ const Square = (props) => {
 		</button>
 	);
 };
+
+// const renderSquare = (props, squareIndex) => {
+// 	return (
+// 		<Square
+// 			value={props.squares[squareIndex]}
+// 			squares={props.squares}
+// 			setSquares={props.setSquares}
+// 			xTurn={props.xTurn}
+// 			setXTurn={props.setXTurn}
+// 			calculateWinner={props.calculateWinner}
+// 			isBoardFull={props.isBoardFull}
+// 		/>
+// 	);
+// };
 
 export default Square;
