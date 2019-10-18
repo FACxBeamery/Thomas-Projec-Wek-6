@@ -16,11 +16,6 @@ const calculateWinner = (squares) => {
 	for (let i = 0; i < winningCombos.length; i++) {
 		const [a, b, c] = winningCombos[i];
 
-		// console.log("i", winningCombos[i]);
-		// console.log("a", a);
-		// console.log("b", b);
-		// console.log("c", c);
-
 		if (squares[a] === squares[b] && squares[b] === squares[c]) {
 			return squares[a];
 		}

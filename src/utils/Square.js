@@ -6,6 +6,10 @@ const Square = (props) => {
 		<button
 			className={styles.square}
 			onClick={() => {
+				// if () {
+				// 	return;
+				// }
+
 				const nextSquares = [...props.squares];
 				if (props.xTurn) {
 					nextSquares[props.id] = "X";
