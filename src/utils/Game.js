@@ -7,7 +7,7 @@ import EnterPlayers from "./EnterPlayers.js";
 
 const Game = (props) => {
 	const [squares, setSquares] = React.useState(Array(9).fill(null));
-	const [xTurn, setXTurn] = React.useState(true);
+	const [p1Turn, setP1Turn] = React.useState(true);
 
 	const calculateWinner = (squares) => {
 		const winningCombos = [
@@ -48,19 +48,19 @@ const Game = (props) => {
 			<EnterPlayers />
 			<Status
 				squares={squares}
-				xTurn={xTurn}
+				p1Turn={p1Turn}
 				calculateWinner={calculateWinner}
 				isBoardFull={isBoardFull}
 			/>
 			<Board
 				squares={squares}
 				setSquares={setSquares}
-				xTurn={xTurn}
-				setXTurn={setXTurn}
+				p1Turn={p1Turn}
+				setP1Turn={setP1Turn}
 				calculateWinner={calculateWinner}
 				isBoardFull={isBoardFull}
 			/>
-			<RestartButton setSquares={setSquares} setXTurn={setXTurn} />
+			<RestartButton setSquares={setSquares} setP1Turn={setP1Turn} />
 		</main>
 	);
 };

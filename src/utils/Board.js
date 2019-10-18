@@ -11,8 +11,8 @@ const Board = (props) => {
 					value={props.squares[0]}
 					squares={props.squares}
 					setSquares={props.setSquares}
-					xTurn={props.xTurn}
-					setXTurn={props.setXTurn}
+					p1Turn={props.p1Turn}
+					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
 					isBoardFull={props.isBoardFull}
 				/>
@@ -21,8 +21,8 @@ const Board = (props) => {
 					value={props.squares[1]}
 					squares={props.squares}
 					setSquares={props.setSquares}
-					xTurn={props.xTurn}
-					setXTurn={props.setXTurn}
+					p1Turn={props.p1Turn}
+					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
 					isBoardFull={props.isBoardFull}
 				/>
@@ -31,8 +31,8 @@ const Board = (props) => {
 					value={props.squares[2]}
 					squares={props.squares}
 					setSquares={props.setSquares}
-					xTurn={props.xTurn}
-					setXTurn={props.setXTurn}
+					p1Turn={props.p1Turn}
+					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
 					isBoardFull={props.isBoardFull}
 				/>
@@ -43,8 +43,8 @@ const Board = (props) => {
 					value={props.squares[3]}
 					squares={props.squares}
 					setSquares={props.setSquares}
-					xTurn={props.xTurn}
-					setXTurn={props.setXTurn}
+					p1Turn={props.p1Turn}
+					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
 					isBoardFull={props.isBoardFull}
 				/>
@@ -53,8 +53,8 @@ const Board = (props) => {
 					value={props.squares[4]}
 					squares={props.squares}
 					setSquares={props.setSquares}
-					xTurn={props.xTurn}
-					setXTurn={props.setXTurn}
+					p1Turn={props.p1Turn}
+					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
 					isBoardFull={props.isBoardFull}
 				/>
@@ -63,8 +63,8 @@ const Board = (props) => {
 					value={props.squares[5]}
 					squares={props.squares}
 					setSquares={props.setSquares}
-					xTurn={props.xTurn}
-					setXTurn={props.setXTurn}
+					p1Turn={props.p1Turn}
+					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
 					isBoardFull={props.isBoardFull}
 				/>
@@ -75,8 +75,8 @@ const Board = (props) => {
 					value={props.squares[6]}
 					squares={props.squares}
 					setSquares={props.setSquares}
-					xTurn={props.xTurn}
-					setXTurn={props.setXTurn}
+					p1Turn={props.p1Turn}
+					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
 					isBoardFull={props.isBoardFull}
 				/>
@@ -85,8 +85,8 @@ const Board = (props) => {
 					value={props.squares[7]}
 					squares={props.squares}
 					setSquares={props.setSquares}
-					xTurn={props.xTurn}
-					setXTurn={props.setXTurn}
+					p1Turn={props.p1Turn}
+					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
 					isBoardFull={props.isBoardFull}
 				/>
@@ -95,8 +95,8 @@ const Board = (props) => {
 					value={props.squares[8]}
 					squares={props.squares}
 					setSquares={props.setSquares}
-					xTurn={props.xTurn}
-					setXTurn={props.setXTurn}
+					p1Turn={props.p1Turn}
+					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
 					isBoardFull={props.isBoardFull}
 				/>

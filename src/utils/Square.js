@@ -14,7 +14,7 @@ const Square = (props) => {
 				}
 
 				const nextSquares = [...props.squares];
-				if (props.xTurn) {
+				if (props.p1Turn) {
 					nextSquares[props.id] = "X";
 				} else {
 					nextSquares[props.id] = "O";
@@ -22,7 +22,7 @@ const Square = (props) => {
 				console.log("squares: ", props.squares);
 				console.log("nextSquares: ", nextSquares);
 				props.setSquares(nextSquares);
-				props.setXTurn(!props.xTurn);
+				props.setP1Turn(!props.p1Turn);
 			}}
 		>
 			{props.value}
