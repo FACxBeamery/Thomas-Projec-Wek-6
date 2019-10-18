@@ -7,7 +7,7 @@ const RestartButton = (props) => {
 			className={styles.restartButton}
 			onClick={() => {
 				props.setSquares(Array(9).fill(null));
-				props.setXTurn(true);
+				props.setP1Turn(true);
 			}}
 		>
 			Restart game!

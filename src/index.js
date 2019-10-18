@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 // import App from "./App";
-import Game from "./utils/Game.js";
+import Game from "./components/Game.js";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(<Game />, document.getElementById("root"));
