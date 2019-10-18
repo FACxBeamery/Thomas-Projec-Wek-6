@@ -1,54 +1,65 @@
 import React from "react";
 import styles from "../index.css";
 
+const calculateWinner = (squares) => {
+	const winningCombos = [
+		[0, 1, 2],
+		[3, 4, 5],
+		[6, 7, 8],
+		[0, 3, 6],
+		[1, 4, 7],
+		[2, 5, 8],
+		[0, 4, 8],
+		[2, 4, 6]
+	];
+
+	winningCombos.forEach((elem) => {
+		const [a, b, c] = elem;
+		if (
+			squares[a] &&
+			squares[a] === squares[b] &&
+			squares[b] === squares[c]
+		) {
+			return squares[a];
+		}
+	});
+	return false;
+};
+
+const isBoardFull = (squares) => {
+	if (!squares.includes(null)) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+const renderStatus = (statusMessage) => {
+	return (
+		<div>
+			<p className={styles.status}>{statusMessage}</p>
+		</div>
+	);
+};
+
 const Status = (props) => {
-	if (props.calculateWinner(props.squares)) {
-		const winner = props.calculateWinner(props.squares);
+	if (calculateWinner(props.squares)) {
+		const winner = calculateWinner(props.squares);
 
 		if (winner === "X") {
-			return (
-				<div>
-					<p className={styles.status}>
-						{"Congratulations Player 1!"}
-					</p>
-				</div>
-			);
+			return renderStatus("Congratualtions Player 1!");
 		} else {
-			return (
-				<div>
-					<p
-						className={styles.status}
-					>{`Congratulations Player 2!`}</p>
-				</div>
-			);
+			return renderStatus("Congratualtions Player 2!");
 		}
 	}
 
-	if (props.isBoardFull(props.squares)) {
-		return (
-			<div>
-				<p className={styles.status}>
-					{"It's a draw! Have another go!"}
-				</p>
-			</div>
-		);
+	if (isBoardFull(props.squares)) {
+		return renderStatus("It's a draw! Have another go!");
 	} else {
 		if (props.p1Turn) {
-			return (
-				<div>
-					<p className={styles.status}>
-						{"Player 1, it's your turn!"}
-					</p>
-				</div>
-			);
+			return renderStatus("Player 1, it's your turn!");
 		} else {
-			return (
-				<div>
-					<p className={styles.status}>
-						{"Player 2, it's your turn!"}
-					</p>
-				</div>
-			);
+			return renderStatus("Player 2, it's your turn!");
 		}
 	}
 };

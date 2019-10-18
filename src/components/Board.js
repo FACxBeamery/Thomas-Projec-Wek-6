@@ -14,7 +14,11 @@ const Board = (props) => {
 					p1Turn={props.p1Turn}
 					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
+					winner={props.winner}
+					setWinner={props.setWinner}
 					isBoardFull={props.isBoardFull}
+					boardFull={props.boardFull}
+					setBoardFull={props.setBoardFull}
 				/>
 				<Square
 					id={1}
@@ -24,7 +28,11 @@ const Board = (props) => {
 					p1Turn={props.p1Turn}
 					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
+					winner={props.winner}
+					setWinner={props.setWinner}
 					isBoardFull={props.isBoardFull}
+					boardFull={props.boardFull}
+					setBoardFull={props.setBoardFull}
 				/>
 				<Square
 					id={2}
@@ -34,7 +42,11 @@ const Board = (props) => {
 					p1Turn={props.p1Turn}
 					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
+					winner={props.winner}
+					setWinner={props.setWinner}
 					isBoardFull={props.isBoardFull}
+					boardFull={props.boardFull}
+					setBoardFull={props.setBoardFull}
 				/>
 			</div>
 			<div className={styles.boardRow}>
@@ -46,7 +58,11 @@ const Board = (props) => {
 					p1Turn={props.p1Turn}
 					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
+					winner={props.winner}
+					setWinner={props.setWinner}
 					isBoardFull={props.isBoardFull}
+					boardFull={props.boardFull}
+					setBoardFull={props.setBoardFull}
 				/>
 				<Square
 					id={4}
@@ -56,7 +72,11 @@ const Board = (props) => {
 					p1Turn={props.p1Turn}
 					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
+					winner={props.winner}
+					setWinner={props.setWinner}
 					isBoardFull={props.isBoardFull}
+					boardFull={props.boardFull}
+					setBoardFull={props.setBoardFull}
 				/>
 				<Square
 					id={5}
@@ -66,7 +86,11 @@ const Board = (props) => {
 					p1Turn={props.p1Turn}
 					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
+					winner={props.winner}
+					setWinner={props.setWinner}
 					isBoardFull={props.isBoardFull}
+					boardFull={props.boardFull}
+					setBoardFull={props.setBoardFull}
 				/>
 			</div>
 			<div className={styles.boardRow}>
@@ -78,7 +102,11 @@ const Board = (props) => {
 					p1Turn={props.p1Turn}
 					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
+					winner={props.winner}
+					setWinner={props.setWinner}
 					isBoardFull={props.isBoardFull}
+					boardFull={props.boardFull}
+					setBoardFull={props.setBoardFull}
 				/>
 				<Square
 					id={7}
@@ -88,7 +116,11 @@ const Board = (props) => {
 					p1Turn={props.p1Turn}
 					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
+					winner={props.winner}
+					setWinner={props.setWinner}
 					isBoardFull={props.isBoardFull}
+					boardFull={props.boardFull}
+					setBoardFull={props.setBoardFull}
 				/>
 				<Square
 					id={8}
@@ -98,7 +130,11 @@ const Board = (props) => {
 					p1Turn={props.p1Turn}
 					setP1Turn={props.setP1Turn}
 					calculateWinner={props.calculateWinner}
+					winner={props.winner}
+					setWinner={props.setWinner}
 					isBoardFull={props.isBoardFull}
+					boardFull={props.boardFull}
+					setBoardFull={props.setBoardFull}
 				/>
 			</div>
 		</div>
