@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../index.css";
 import Square from "./Square.js";
 
-const renderSquare = (props, squareIndex) => {
+const RenderSquare = (props, squareIndex) => {
 	return (
 		<Square
 			id={squareIndex}
@@ -23,19 +23,20 @@ const Board = (props) => {
 	return (
 		<div>
 			<div className={styles.boardRow}>
-				{renderSquare(props, 0)}
-				{renderSquare(props, 1)}
-				{renderSquare(props, 2)}
+				{RenderSquare(props, 0)}
+				{/* <RenderSquare {{props}, {0}} /> */}
+				{RenderSquare(props, 1)}
+				{RenderSquare(props, 2)}
 			</div>
 			<div className={styles.boardRow}>
-				{renderSquare(props, 3)}
-				{renderSquare(props, 4)}
-				{renderSquare(props, 5)}
+				{RenderSquare(props, 3)}
+				{RenderSquare(props, 4)}
+				{RenderSquare(props, 5)}
 			</div>
 			<div className={styles.boardRow}>
-				{renderSquare(props, 6)}
-				{renderSquare(props, 7)}
-				{renderSquare(props, 8)}
+				{RenderSquare(props, 6)}
+				{RenderSquare(props, 7)}
+				{RenderSquare(props, 8)}
 			</div>
 		</div>
 	);

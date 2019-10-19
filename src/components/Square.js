@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../index.css";
 
 const Square = (props) => {
+	useEffect(() => {
+		calculateWinner(props.squares);
+		isBoardFull(props.squares);
+	}, [props.squares]);
+
 	const calculateWinner = (squares) => {
 		const winningCombos = [
 			[0, 1, 2],
@@ -35,50 +40,34 @@ const Square = (props) => {
 		}
 	};
 
+	const handleClick = () => {
+		if (props.winner) {
+			return;
+		}
+
+		if (props.boardFull) {
+			return;
+		}
+
+		if (props.squares[props.id] !== null) {
+			return;
+		}
+
+		const nextSquares = [...props.squares];
+		if (props.p1Turn) {
+			nextSquares[props.id] = "X";
+		} else {
+			nextSquares[props.id] = "O";
+		}
+		props.setSquares(nextSquares);
+		props.setP1Turn(!props.p1Turn);
+	};
+
 	return (
-		<button
-			className={styles.square}
-			onClick={() => {
-				calculateWinner(props.squares);
-				isBoardFull(props.squares);
-
-				if (props.winner) {
-					console.log("Winner found! Terminate game!");
-					return;
-				}
-
-				if (props.boardFull) {
-					console.log("Board full! Terminate game!");
-					return;
-				}
-
-				const nextSquares = [...props.squares];
-				if (props.p1Turn) {
-					nextSquares[props.id] = "X";
-				} else {
-					nextSquares[props.id] = "O";
-				}
-				props.setSquares(nextSquares);
-				props.setP1Turn(!props.p1Turn);
-			}}
-		>
+		<button className={styles.square} onClick={handleClick}>
 			{props.value}
 		</button>
 	);
 };
-
-// const renderSquare = (props, squareIndex) => {
-// 	return (
-// 		<Square
-// 			value={props.squares[squareIndex]}
-// 			squares={props.squares}
-// 			setSquares={props.setSquares}
-// 			xTurn={props.xTurn}
-// 			setXTurn={props.setXTurn}
-// 			props.calculateWinner={props.props.calculateWinner}
-// 			props.isBoardFull={props.props.isBoardFull}
-// 		/>
-// 	);
-// };
 
 export default Square;
