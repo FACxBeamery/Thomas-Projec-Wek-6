@@ -9,6 +9,8 @@ const EnterPlayers = (props) => {
 		event.preventDefault();
 		const gitHubUserRegex = /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i;
 
+		props.setGameState(1);
+
 		if (gitHubUserRegex.test(player1UsernameInput)) {
 			props.setPlayer1Username(player1UsernameInput);
 		} else {

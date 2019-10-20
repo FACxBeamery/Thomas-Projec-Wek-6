@@ -7,7 +7,6 @@ const GitHubImage = (props) => {
 		getUserGitHubPicture(props.player1Username)
 			.then((data) => {
 				if (data) {
-					console.log(data.avatar_url);
 					props.setPlayer1GitHubImageURL(data.avatar_url);
 				}
 			})
