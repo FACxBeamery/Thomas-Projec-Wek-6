@@ -28,14 +28,15 @@ const GitHubImage = (props) => {
 	}, []);
 
 	return (
-		<div>
+		<div className={styles.gitHubImageContainer}>
 			<img
-				className={styles.gitHbImage}
+				className={styles.gitHubImage}
 				src={props.player1GitHubImageURL}
 				alt="The GitHub avatar of Player 1"
 			/>
+			<p className={styles.versus}>vs.</p>
 			<img
-				className={styles.gitHbImage}
+				className={styles.gitHubImage}
 				src={props.player2GitHubImageURL}
 				alt="The GitHub avatar of Player 2"
 			/>

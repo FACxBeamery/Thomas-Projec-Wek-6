@@ -13,8 +13,8 @@ const Game = (props) => {
 	const [winner, setWinner] = React.useState(null);
 	const [boardFull, setBoardFull] = React.useState(false);
 
-	const [player1Username, setPlayer1Username] = React.useState();
-	const [player2Username, setPlayer2Username] = React.useState();
+	const [player1Username, setPlayer1Username] = React.useState("test");
+	const [player2Username, setPlayer2Username] = React.useState("test");
 	const [player1GitHubImageURL, setPlayer1GitHubImageURL] = React.useState(
 		null
 	);

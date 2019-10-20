@@ -1,19 +1,105 @@
-.body {
-	font: 14px "Century Gothis", Futura, sans-serif;
-	margin: 20px;
+html {
+	background: #485b6e;
+	font-family: Helvetica;
+	font-weight: bold;
+	text-align: center;
+}
+
+h1 {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #f1f1f1;
 }
 
 .square {
-	background: #ffffff;
-	border: 1px solid #999999;
+	/* background: transparent;
+	border: none; */
 	font-size: 1.5rem;
 	height: 10vw;
 	width: 10vw;
 	margin: 0 auto;
 	text-align: center;
 	color: black;
+	vertical-align: top;
 }
 
-.status {
-	margin: 10px;
+.square:hover {
+	background: #f9f9f9;
+}
+
+.status,
+.versus {
+	color: #f1f1f1;
+	margin: 5rem auto;
+	font-size: 1.5rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #f1f1f1;
+	margin: 5rem auto;
+	padding: 2.5rem;
+	width: 35vw;
+	max-width: 35vw;
+}
+
+label,
+input {
+	margin: 0.5rem auto;
+	width: 35vw;
+	max-width: 35vw;
+}
+
+.invalidUsername {
+	color: red;
+}
+
+.submitButton {
+	text-align: center;
+	border: none;
+	padding: 0.5rem 1rem;
+	background: #ed4e6e;
+	color: #fff;
+	font-size: 1rem;
+	letter-spacing: 0.1rem;
+	cursor: pointer;
+	display: inline-block;
+	margin: 1rem 0.25rem;
+	border-radius: 2px;
+}
+
+.submitButton:hover {
+	background: #2c3e52;
+}
+
+.gitHubImageContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.gitHubImage {
+	height: 20vh;
+	margin: 0 auto;
+}
+
+.restartButton {
+	text-align: center;
+	border: none;
+	padding: 0.5rem 1rem;
+	background: #ed4e6e;
+	color: #fff;
+	font-size: 1rem;
+	letter-spacing: 0.1rem;
+	cursor: pointer;
+	display: inline-block;
+	margin: 1rem 0.25rem;
+	border-radius: 2px;
+}
+
+.restartButton:hover {
+	background: #2c3e52;
 }

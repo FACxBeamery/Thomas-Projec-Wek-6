@@ -22,6 +22,7 @@ const RenderSquare = (props, squareIndex) => {
 const Board = (props) => {
 	return (
 		<div>
+			<h1>Tic-Tac-Toe</h1>
 			<div className={styles.boardRow}>
 				{RenderSquare(props, 0)}
 				{/* <RenderSquare {{props}, {0}} /> */}
