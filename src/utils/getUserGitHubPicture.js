@@ -1,6 +1,4 @@
-// import token from "../token.js";
-
-const token = "2e61ba30579d21b186653b454439839f1b5d6a48";
+import token from "../token.js";
 
 const getUserGitHubPicture = (username) => {
 	return fetch(
