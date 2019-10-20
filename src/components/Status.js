@@ -12,9 +12,9 @@ const renderStatus = (statusMessage) => {
 const Status = (props) => {
 	if (props.winner) {
 		if (props.winner === "X") {
-			return renderStatus("Congratualtions Player 1!");
+			return renderStatus(`Congratualtions ${props.player1Username}!`);
 		} else {
-			return renderStatus("Congratualtions Player 2!");
+			return renderStatus(`Congratualtions ${props.player2Username}!`);
 		}
 	}
 
@@ -22,9 +22,9 @@ const Status = (props) => {
 		return renderStatus("It's a draw! Have another go!");
 	} else {
 		if (props.p1Turn) {
-			return renderStatus("Player 1, it's your turn!");
+			return renderStatus(`${props.player1Username}, it's your turn!`);
 		} else {
-			return renderStatus("Player 2, it's your turn!");
+			return renderStatus(`${props.player2Username}, it's your turn!`);
 		}
 	}
 };
