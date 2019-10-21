@@ -1,4 +1,5 @@
-import token from "../token.js";
+const token = process.env.REACT_APP_TOKEN;
+// import token from "../token.js";
 
 const getUserGitHubPicture = (username) => {
 	return fetch(
